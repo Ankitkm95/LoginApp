@@ -39,7 +39,9 @@ const Login = () => {
             let isDataCorrect = userDatas.find(el => (el.name === name && el.phoneNo === phoneNo));
 
             if(isDataCorrect){
+                localStorage.setItem("loginData", true);
                 login();
+
                 // navigate("/")
             }else{
                 alert("incorrect credientials")
